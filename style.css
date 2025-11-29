@@ -1,0 +1,243 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9faf9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #2e7d32, #4caf50);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Основной контент */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Популярная обувь */
+.popular-shoes h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e7d32;
+    font-size: 2rem;
+}
+
+.shoe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.shoe-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.shoe-card:hover {
+    transform: translateY(-5px);
+}
+
+.shoe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.shoe-card h3 {
+    padding: 1rem;
+    color: #2e7d32;
+    font-size: 1.2rem;
+}
+
+.shoe-card p {
+    padding: 0 1rem 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Философия */
+.philosophy {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.philosophy-text {
+    flex: 1;
+}
+
+.philosophy-text h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.philosophy-text p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.philosophy-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Почему выбирают нас */
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e7d32;
+    font-size: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+.benefit-card h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Подвал */
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #81c784;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .popular-shoes h2,
+    .why-choose-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .philosophy {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .philosophy-image img {
+        max-width: 100%;
+    }
+
+    .benefit-card .icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shoe-card img,
+    .philosophy-image img {
+        height: 180px;
+    }
+
+    .shoe-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
